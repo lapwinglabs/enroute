@@ -1,0 +1,20 @@
+{
+  "name": "enroute",
+  "version": "0.0.1",
+  "description": "tiny functional router",
+  "keywords": [],
+  "author": "Matthew Mueller <matt@lapwinglabs.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lapwinglabs/enroute.git"
+  },
+  "dependencies": {
+    "object-assign": "^4.0.1",
+    "path-to-regexp": "^1.2.1"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "main": "index"
+}
