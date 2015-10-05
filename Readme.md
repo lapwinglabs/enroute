@@ -3,7 +3,34 @@
 
   tiny functional router
 
-## License 
+## Installation
+
+```
+npm install enroute
+```
+
+## Usage
+
+
+```js
+function edit_user (props) {
+  assert.equal(props.slug, 'matt')
+  assert.equal(props.additional, 'props')
+  return component(props)
+}
+
+var component = Enroute({
+  '/users/new': create_user,
+  '/users/:slug': find_user,
+  '/users/:slug/edit': edit_user,
+  '*': not_found
+})('/users/matt/edit', { additional: 'props' })
+
+// psuedo create component code
+create(component)
+```
+
+## License
 
 (The MIT License)
 

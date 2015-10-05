@@ -64,11 +64,3 @@ function match(path, params, pathname) {
 
   return true;
 }
-
-// var out = Enroute({
-//   '/new': 'new',
-//   '/:slug': function (props) { console.log(props) },
-//   '*': 'cool'
-// })('/hi-there', { whatever: 'lol' })
-
-// console.log(out);
