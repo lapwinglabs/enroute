@@ -30,7 +30,7 @@ function Enroute (routes) {
 
       if (m) {
         if (typeof fn !== 'function') return fn
-        else return fn(assign({}, params, props))
+        else return fn(params, props)
       }
     }
 

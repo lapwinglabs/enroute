@@ -13,10 +13,10 @@ npm install enroute
 
 
 ```js
-function edit_user (props) {
-  assert.equal(props.slug, 'matt')
+function edit_user (params, props) {
+  assert.equal(params.slug, 'matt')
   assert.equal(props.additional, 'props')
-  return component(props)
+  return component(assign({}, params, props))
 }
 
 var component = Enroute({
