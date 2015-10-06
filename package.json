@@ -1,8 +1,12 @@
 {
   "name": "enroute",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "tiny functional router",
-  "keywords": [],
+  "keywords": [
+    "router",
+    "functional",
+    "small"
+  ],
   "author": "Matthew Mueller <matt@lapwinglabs.com>",
   "repository": {
     "type": "git",
