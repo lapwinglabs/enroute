@@ -3,7 +3,6 @@
  */
 
 var Regexp = require('path-to-regexp')
-var assign = require('object-assign')
 
 /**
  * Export `Enroute`
