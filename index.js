@@ -22,13 +22,12 @@ function Enroute (routes) {
   return function enroute (location, props) {
     if (!location) throw new Error('enroute requires a location')
     props = props || {}
-    var params = {}
 
     for (var route in routes) {
-      var m = match(route, params, location)
+      var params = match(route, location)
       var fn = routes[route]
 
-      if (m) {
+      if (params) {
         if (typeof fn !== 'function') return fn
         else return fn(params, props)
       }
@@ -40,21 +39,20 @@ function Enroute (routes) {
 
 /**
  * Check if this route matches `path`, if so
- * populate `params`.
+ * return a `params` object.
  *
  * @param {String} path
- * @param {Object} params
- * @return {Boolean}
+ * @return {Object}
  * @api private
  */
 
-function match(path, params, pathname) {
+function match(path, pathname) {
   var keys = [];
   var regexp = Regexp(path, keys);
   var m = regexp.exec(pathname);
+  var params = {};
 
   if (!m) return false;
-  else if (!params) return true;
 
   for (var i = 1, len = m.length; i < len; ++i) {
     var key = keys[i - 1];
@@ -62,5 +60,5 @@ function match(path, params, pathname) {
     if (key) params[key.name] = val;
   }
 
-  return true;
+  return params;
 }
