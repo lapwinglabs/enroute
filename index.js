@@ -54,7 +54,6 @@ function match(path, params, pathname) {
   var m = regexp.exec(pathname);
 
   if (!m) return false;
-  else if (!params) return true;
 
   for (var i = 1, len = m.length; i < len; ++i) {
     var key = keys[i - 1];
